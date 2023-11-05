@@ -1,17 +1,19 @@
 const UPPERCASE_BEGINING_IN_ASCII = 65
+const UPPERCASE_ENDING_IN_ASCII = 90
 const LOWERCASE_BEGINING_IN_ASCII = 97
+const LOWERCASE_ENDING_IN_ASCII = 122
 const ALPHABET_LENGTH = 26
 
 function isUpperCase(letter) {
     letter = letter.charCodeAt()
 
-    return Boolean(letter >= 65 && letter <= 90)
+    return Boolean(letter >= UPPERCASE_BEGINING_IN_ASCII && letter <= UPPERCASE_ENDING_IN_ASCII)
 }
 
 function isLowerCase(letter) {
     letter = letter.charCodeAt()
 
-    return Boolean(letter >= 97 && letter <= 122)
+    return Boolean(letter >= LOWERCASE_BEGINING_IN_ASCII && letter <= LOWERCASE_ENDING_IN_ASCII)
 }
 
 function encrypt(text, key) {
